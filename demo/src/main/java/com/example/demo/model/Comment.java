@@ -1,10 +1,7 @@
 package com.example.demo.model;
 
-import java.util.Optional;
-
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -30,11 +27,17 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.UUID)
     @Setter 
     private String id;
+    @Setter
     private String username;
+    @Setter
     private String comentario_corto;
+    @Setter
     private Short estrellas;
+    @Setter
     private String comentario_largo;
+    @Setter
     private String imagen1;
+    @Setter
     private String imagen2;
     
     @JsonBackReference
